@@ -1,25 +1,28 @@
-import logo from './logo.svg';
+/* eslint-disable jsx-a11y/alt-text */
+/* eslint-disable no-unused-vars */
+import React from 'react';
 import './App.css';
+import CardContainer from './CustomCard.js';
 
+
+
+
+const firstName = prompt(" ton nom ?"); 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div>
+      <CardContainer firstName={firstName} />
+      <p style={{position:'relative',top:'100px',left:'300px'}}>Bonjour, {firstName ? firstName : "là"} </p>
+      <>
+        {firstName && <img src='./assets/img/valider.png'/>}
+      </>
     </div>
+    
   );
 }
+
+
+
+
 
 export default App;
